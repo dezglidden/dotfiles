@@ -1,0 +1,209 @@
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/dezglidden/.oh-my-zsh
+ 
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+HIST_STAMPS="dd.mm.yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+# User configuration
+
+export PATH="/Users/dezglidden/.composer/vendor/bin:/usr/local/bin/composer:/Users/dezglidden/.node/bin:/Users/dezglidden/android-sdk-macosx/tools:/Users/dezglidden/android-sdk-macosx/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Include private aliases
+. ~/.zsh_private
+
+# Show hidden dot files
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Hide/show all desktop icons
+alias hidedesktop='defaults write com.apple.finder CreateDesktop -bool false && killall Finder'
+alias showdesktop='defaults write com.apple.finder CreateDesktop -bool true && killall Finder'
+
+# Lock the screen (when going AFK)
+alias afk='/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend'
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# Delete a directory and all of its contents
+alias del='trash -rf'
+
+# Vagrant commands
+alias vu='vagrant up'
+alias vh='vagrant halt'
+alias vs='vagrant suspend'
+alias vst='vagrant status'
+alias vssh='vagrant ssh'
+alias vd='vagrant destroy'
+alias vr='vagrant reload'
+alias vp='vagrant provision'
+alias vw='cd ~/www; vu; cd public_html;'
+alias vrp='vagrant reload --provision'
+alias vbu='vagrant box update'
+
+# Common directories
+alias dl='cd ~/Downloads'
+alias dropbox='cd ~/Dropbox'
+alias www='cd ~/www'
+alias sublpack='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages'
+
+# Navigation shortcuts
+alias ~='cd ~'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+# Server shortcuts
+alias serve='python -m SimpleHTTPServer 8000'
+alias eserve='ember serve'
+
+# Edit the Hosts file
+alias hosts='subl /etc/hosts'
+
+# Add/edit aliases
+alias aliases='subl ~/.bash_profile'
+alias zp='subl ~/.zshrc'
+alias zpr='source ~/.zshrc'
+
+# Applications - example: mou some_file.md
+alias pages='open -a Pages'
+alias preview='open -a Preview'
+alias chrome='open -a Chrome'
+alias canary='open -a Google\ Chrome\ Canary'
+alias finder='open -a Finder'
+alias datagrip='open -a DataGrip'
+alias sketch='open -a Sketch'
+alias numbers='open -a Numbers'
+alias macdown='open -a MacDown'
+
+# Git
+alias gcl='git clone'
+alias gst='git status'
+alias gch='git checkout'
+alias gchb='git checkout -b'
+alias gb='git branch'
+alias gps='git push'
+alias gpl='git pull'
+alias gf='git fetch'
+alias gfp='git fetch && git pull'
+alias ga='git add .'
+alias gcm='git commit -m'
+alias gcsync='git clone https://dez_gemstone@bitbucket.org/gemstone_cloud/sync.git'
+
+# npm
+alias npmi='npm install'
+
+# Ember-cli commands
+# alias etemp='ember generate template'
+# alias emodel='ember generate model'
+# alias eres='ember generate resource'
+# alias eroute='ember generate route'
+# alias econt='ember generate controller'
+# alias ehelp='ember generate helper'
+# alias eview='ember generate view'
+# alias eadapt='ember generate adapter'
+# alias enew='ember new'
+
+# Foundation
+
+
+# Laravel 
+alias lar='laravel'
+alias larn='laravel new' 
+alias larinit='composer require laravel/homestead --dev; php vendor/bin/homestead make; subl homestead.yaml; subl hosts;'
+alias hs='subl ~/.homestead'
+
+# Artisan
+alias pa='php artisan'
+alias pal='php artisan list'
+alias pat='php artisan tinker'
+alias paseed='php artisan db:seed'
+alias pacmd='php artisan make:command'
+alias pacont='php artisan make:controller'
+alias pamig='php artisan make:migration'
+alias pamod='php artisan make:model'
+
+# Angular-cli
+alias ngn='ng new'
+alias ngs='ng serve'
+alias nggc='ng generate component'
+alias nggcl='ng generate class'
+alias nggd='ng generate directive'
+alias ngge='ng generate enum'
+alias nggg='ng generate guard'
+alias nggi='ng generate interface'
+alias nggm='ng generate module'
+alias nggp='ng generate pipe'
+alias nggs='ng generate service'
+

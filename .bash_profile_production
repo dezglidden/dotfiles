@@ -1,0 +1,8 @@
+# Nav shortcuts
+alias ~='cd ~'
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+# Common working directories
+alias www='cd /var/www'
