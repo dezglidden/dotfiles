@@ -112,6 +112,10 @@ alias vw='cd ~/www; vu; cd public_html;'
 alias vrp='vagrant reload --provision'
 alias vbu='vagrant box update'
 
+# Artisan 
+alias pa='php artisan'
+alias pamc='php artisan make:command'
+
 # Common directories
 alias dl='cd ~/Downloads'
 alias dropbox='cd ~/Dropbox'
@@ -145,7 +149,7 @@ alias finder='open -a Finder'
 alias datagrip='open -a DataGrip'
 alias sketch='open -a Sketch'
 alias numbers='open -a Numbers'
-alias macdown='open -a MacDown'
+alias bear='open -a Bear'
 
 # Git
 alias gcl='git clone'
@@ -159,10 +163,24 @@ alias gf='git fetch'
 alias gfp='git fetch && git pull'
 alias ga='git add .'
 alias gcm='git commit -m'
-alias gcsync='git clone https://dez_gemstone@bitbucket.org/gemstone_cloud/sync.git'
+alias gin='git init'
 
 # npm
 alias npmi='npm install'
+alias npmig='npm install -g'
+alias npmid='npm install --save-dev'
+alias npml='npm list'
+
+# Yarn
+alias yst='yarn start'
+alias yb='yarn build'
+alias yt='yarn test'
+alias ye='yarn eject'
+alias ya'yarn add'
+alias yad='yarn add --dev'
+alias yin='yarn init'
+alias yup='yarn upgrade'
+alias yupl='yarn upgrade --latest'
 
 # Ember-cli commands
 # alias etemp='ember generate template'
@@ -206,6 +224,9 @@ alias nggi='ng generate interface'
 alias nggm='ng generate module'
 alias nggp='ng generate pipe'
 alias nggs='ng generate service'
+
+# React
+alias rapp='create-react-app'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
