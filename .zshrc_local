@@ -164,6 +164,7 @@ alias gfp='git fetch && git pull'
 alias ga='git add .'
 alias gcm='git commit -m'
 alias gin='git init'
+alias grv='git remote -v'
 
 # npm
 alias npmi='npm install'
