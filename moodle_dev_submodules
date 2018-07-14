@@ -1,0 +1,9 @@
+[submodule "local/codechecker"]
+    path = local/codechecker
+    url = git://github.com/moodlehq/moodle-local_codechecker.git
+[submodule "local/dbadminer"]
+    path = local/db
+    url = https://github.com/dezglidden/moodle-local_dbadminer.git
+[submodule "local/moodlecheck"]
+    path = local/moodlecheck
+    url = https://github.com/marinaglancy/moodle-local_moodlecheck.git
